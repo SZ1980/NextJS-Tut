@@ -3,18 +3,15 @@ import getAllUsers from '@/lib/getAllUsers'
 import Link from 'next/link'
 import { log } from 'console'
 
+
 export const metadata: Metadata = {
     title: 'Users'
 }
 
-
-
 export default async function UsersPage() {
         const usersData: Promise<User[]> = getAllUsers()
                 
-            const users = await usersData
-
-            
+            const users = await usersData            
 
     const content = (
         <section>
